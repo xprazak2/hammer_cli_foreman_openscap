@@ -12,6 +12,5 @@ Gem::Specification.new do |s|
   s.files = Dir['lib/**/*.rb']
   s.require_paths = ["lib"]
 
-  s.add_dependency 'hammer_cli', '>= 0.0.6'
-  s.add_dependency 'hammer_cli_foreman'
+  s.add_dependency 'hammer_cli_foreman', '~> 0.6'
 end
