@@ -1,0 +1,2 @@
+module HammerCLIForemanOpenscap
+end
