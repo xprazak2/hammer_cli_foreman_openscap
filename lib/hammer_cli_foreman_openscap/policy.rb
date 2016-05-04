@@ -18,7 +18,7 @@ module HammerCLIForemanOpenscap
         field :weekday, _("Weekday")
         field :cron_line, _("Cron line")
         field :scap_content_id, _("Scap content Id")
-        field :scap_content_profile_id, _("Scap Content Profile Id")
+        field :scap_content_profile_id, _("Scap Content profile Id")
       end
       build_options
     end
