@@ -27,7 +27,15 @@ describe HammerCLIForemanOpenscap::ScapContent do
   end
 
   context "DeleteCommand" do
-    let(:cmd) { HammerCLIForemanOpenscap::Policy::DeleteCommand.new("", ctx) }
+    let(:cmd) { HammerCLIForemanOpenscap::ScapContent::DeleteCommand.new("", ctx) }
+
+    context "parameters" do
+      it_should_accept "id", ["--id=1"]
+    end
+  end
+
+  context "UpdateCommand" do
+    let(:cmd) { HammerCLIForemanOpenscap::ScapContent::UpdateCommand.new("", ctx) }
 
     context "parameters" do
       it_should_accept "id", ["--id=1"]
