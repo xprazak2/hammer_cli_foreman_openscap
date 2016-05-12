@@ -1,10 +1,11 @@
 require 'hammer_cli_foreman'
 require 'hammer_cli_foreman_openscap/id_resolver'
 require 'hammer_cli_foreman_openscap/commands'
+require 'hammer_cli_foreman_openscap/exception_handler'
 
 module HammerCLIForemanOpenscap
-  def self.exception_handler_port
-    HammerCLIForeman::ExceptionHandler
+  def self.exception_handler_class
+    HammerCLIForemanOpenscap::ExceptionHandler
   end
 
   HammerCLI::MainCommand.lazy_subcommand("arf-report", _("Manipulate compliance reports."),
