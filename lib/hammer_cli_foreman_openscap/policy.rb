@@ -19,6 +19,11 @@ module HammerCLIForemanOpenscap
         field :cron_line, _("Cron line")
         field :scap_content_id, _("Scap content Id")
         field :scap_content_profile_id, _("Scap Content profile Id")
+
+        collection :organizations, _("Organizations") do
+          field :id, _("Id")
+          field :name, _("Name")
+        end
       end
       build_options
     end
