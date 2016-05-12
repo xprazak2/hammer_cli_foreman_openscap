@@ -1,4 +1,6 @@
 require 'hammer_cli_foreman'
+require 'hammer_cli_foreman_openscap/id_resolver'
+require 'hammer_cli_foreman_openscap/commands'
 
 module HammerCLIForemanOpenscap
   def self.exception_handler_port

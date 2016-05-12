@@ -47,7 +47,7 @@ module HammerCLIForemanOpenscap
       build_options
     end
 
-    class UpdateCommand < HammerCLIForeman::UpdateCommand
+    class UpdateCommand < HammerCLIForemanOpenscap::UpdateCommand
       success_message _("Scap content updated")
       failure_message _("Could not update Scap content")
 
