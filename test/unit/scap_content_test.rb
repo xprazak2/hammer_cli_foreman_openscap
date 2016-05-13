@@ -1,8 +1,4 @@
-ENV['TEST_API_VERSION'] = '1.11'
-
-require File.join(Gem.loaded_specs['hammer_cli_foreman'].full_gem_path, 'test/unit/test_helper')
-require File.join(File.dirname(__FILE__), '..', 'compliance_resource_mock')
-require 'hammer_cli_foreman_openscap/scap_content'
+require_relative "../test_helper"
 
 describe HammerCLIForemanOpenscap::ScapContent do
   include CommandTestHelper
@@ -39,6 +35,21 @@ describe HammerCLIForemanOpenscap::ScapContent do
 
     context "parameters" do
       it_should_accept "id", ["--id=1"]
+    end
+  end
+
+  context "InfoCommand" do
+    let(:cmd) { HammerCLIForemanOpenscap::ScapContent::InfoCommand.new("", ctx) }
+
+    context "parameters" do
+      it_should_accept "id", ["--id=1"]
+    end
+
+    context "output" do
+      with_params ["--id=1"] do
+        it_should_print_n_records 1
+        it_should_print_columns ["Id", "Title", "Created at", "Original filename", "Scap content profiles", "Organizations"]
+      end
     end
   end
 end
