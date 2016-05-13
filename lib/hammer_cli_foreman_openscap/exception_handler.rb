@@ -22,7 +22,7 @@ module HammerCLIForemanOpenscap
     def handle_scap_error(e)
       response = JSON.parse(e.response)
       response = HammerCLIForeman.record_to_common_format(response)
-      print_error response["message"]
+      print_error(response["message"] || response["full_messages"])
       log_full_error e
     end
   end
