@@ -38,11 +38,7 @@ module HammerCLIForemanOpenscap
           field :profile_id, _("Profile id")
           field :title, _("Title")
         end
-
-        collection :organizations, _("Organizations") do
-          field :id, _("Id")
-          field :name, _("Name")
-        end
+        HammerCLIForeman::References.taxonomies(self)
       end
       build_options
     end

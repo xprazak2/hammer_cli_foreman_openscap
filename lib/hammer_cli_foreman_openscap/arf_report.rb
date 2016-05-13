@@ -20,6 +20,7 @@ module HammerCLIForemanOpenscap
         field :host_id, _("Host Id")
         field :openscap_proxy_id, _("Openscap proxy Id")
         field :openscap_proxy_name, _("Openscap proxy name")
+        HammerCLIForeman::References.taxonomies(self)
       end
 
       build_options

@@ -1,7 +1,9 @@
 module HammerCLIForemanOpenscap
   class Searchables < HammerCLIForeman::Searchables
     SEARCHABLES = {
-      :scap_content => []
+      :scap_content => [],
+      :arf_report => [],
+      :policy => [s_name(_("Policy name"))]
     }
 
     DEFAULT_SEARCHABLES = [s_name(_("Name to search by"))]
