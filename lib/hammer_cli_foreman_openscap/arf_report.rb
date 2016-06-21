@@ -15,7 +15,7 @@ module HammerCLIForemanOpenscap
       build_options
     end
 
-    class InfoCommand < HammerCLIForeman::InfoCommand
+    class InfoCommand < HammerCLIForemanOpenscap::InfoCommand
       output ListCommand.output_definition do
         field :host_id, _("Host Id")
         field :openscap_proxy_id, _("Openscap proxy Id")

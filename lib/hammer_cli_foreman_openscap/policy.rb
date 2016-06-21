@@ -31,7 +31,7 @@ module HammerCLIForemanOpenscap
       build_options
     end
 
-    class CreateCommand < HammerCLIForeman::CreateCommand
+    class CreateCommand < HammerCLIForemanOpenscap::CreateCommand
 
       success_message _("Policy created")
       failure_message _("Could not create the policy")
@@ -40,7 +40,7 @@ module HammerCLIForemanOpenscap
 
     end
 
-    class UpdateCommand < HammerCLIForeman::UpdateCommand
+    class UpdateCommand < HammerCLIForemanOpenscap::UpdateCommand
       success_message _("Policy updated")
       failure_message _("Could not update the policy")
 

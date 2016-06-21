@@ -28,7 +28,7 @@ module HammerCLIForemanOpenscap
       build_options
     end
 
-    class InfoCommand < HammerCLIForeman::InfoCommand
+    class InfoCommand < HammerCLIForemanOpenscap::InfoCommand
       output ListCommand.output_definition do
         field :created_at, _("Created at")
         field :original_filename, _("Original filename")

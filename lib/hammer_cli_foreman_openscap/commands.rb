@@ -20,4 +20,12 @@ module HammerCLIForemanOpenscap
   class UpdateCommand < HammerCLIForeman::UpdateCommand
     include HammerCLIForemanOpenscap::ResolverCommons
   end
+
+  class InfoCommand < HammerCLIForeman::InfoCommand
+    include HammerCLIForemanOpenscap::ResolverCommons
+  end
+
+  class CreateCommand < HammerCLIForeman::CreateCommand
+    include HammerCLIForemanOpenscap::ResolverCommons
+  end
 end
