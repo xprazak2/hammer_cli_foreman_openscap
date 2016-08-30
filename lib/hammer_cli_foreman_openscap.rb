@@ -16,7 +16,7 @@ module HammerCLIForemanOpenscap
                                          "HammerCLIForemanOpenscap::Policy",
                                          "hammer_cli_foreman_openscap/policy")
 
-  HammerCLI::MainCommand.lazy_subcommand("scap-content", _("Manipulate Scao contents."),
+  HammerCLI::MainCommand.lazy_subcommand("scap-content", _("Manipulate Scap contents."),
                                          "HammerCLIForemanOpenscap::ScapContent",
                                          "hammer_cli_foreman_openscap/scap_content")
 
