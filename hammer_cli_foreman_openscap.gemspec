@@ -9,8 +9,9 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.summary = %q{ForemanOpenscap commands for Hammer}
   s.license = "GPL-3"
-  s.files = Dir['lib/**/*.rb']
+  s.files = Dir['{lib,config}/**/*', 'LICENSE', 'README.md']
   s.require_paths = ["lib"]
+  s.test_files = Dir["test/**/*"]
 
   s.add_dependency 'hammer_cli_foreman', '~> 0.6'
 end
