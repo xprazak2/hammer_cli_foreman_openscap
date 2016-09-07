@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors = ["The Foreman team"]
   s.version = HammerCLIForemanOpenscap.version.dup
   s.platform = Gem::Platform::RUBY
-  s.summary = %q{ForemanOpenscap commands for Hammer}
+  s.summary = %q{Foreman OpenSCAP commands for Hammer}
   s.license = "GPL-3"
   s.files = Dir['lib/**/*.rb']
   s.require_paths = ["lib"]
