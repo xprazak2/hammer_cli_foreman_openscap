@@ -33,6 +33,15 @@ module HammerCLIForemanOpenscap
       build_options
     end
 
+    class DownloadCommand < HammerCLIForemanOpenscap::DownloadCommand
+      success_message _("Arf report downloaded")
+      failure_message _("Could not download the Arf report")
+
+      option "--path", "PATH", _("Path where to save downloaded file"),
+        :attribute_name => :option_path
+      build_options
+    end
+
     autoload_subcommands
   end
 end
