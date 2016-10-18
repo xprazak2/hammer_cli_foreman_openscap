@@ -3,11 +3,17 @@ module HammerCLIForemanOpenscap
     def mappings
       [
         [RestClient::InternalServerError, :handle_internal_error],
-        [RestClient::UnprocessableEntity, :handle_unprocessable_entity]
+        [RestClient::UnprocessableEntity, :handle_unprocessable_entity],
+        [HammerCLIForemanOpenscap::DownloadError, :handle_download_error]
       ] + super
     end
 
     protected
+
+    def handle_download_error(e)
+      print_error e.message
+      log_full_error e
+    end
 
     def handle_internal_error(e)
       handle_scap_error(e)
