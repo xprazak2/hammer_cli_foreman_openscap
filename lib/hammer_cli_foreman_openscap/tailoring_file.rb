@@ -1,28 +1,28 @@
 module HammerCLIForemanOpenscap
-  class ScapContent < HammerCLIForeman::Command
+  class TailoringFile < HammerCLIForeman::Command
 
-    resource :scap_contents
+    resource :tailoring_files
 
     class ListCommand < HammerCLIForeman::ListCommand
       output do
         field :id, _("Id")
-        field :title, _("Title")
+        field :name, _("Name")
       end
       build_options
     end
 
     class CreateCommand < HammerCLIForemanOpenscap::CreateWithScapFileCommand
-      success_message _("Scap content successfully created")
-      failure_message _("Failed to create Scap content")
+      success_message _("Tailoring file successfully created")
+      failure_message _("Failed to create Tailoring file")
 
-      scap_file_option _("Scap content file")
+      scap_file_option _("Tailoring file content")
 
       build_options
     end
 
     class DeleteCommand < HammerCLIForeman::DeleteCommand
-      success_message _("Scap content deleted")
-      failure_message _("Could not delete Scap content")
+      success_message _("Tailoring file deleted")
+      failure_message _("Could not delete Tailoring file")
 
       build_options
     end
@@ -32,7 +32,7 @@ module HammerCLIForemanOpenscap
         field :created_at, _("Created at")
         field :original_filename, _("Original filename")
 
-        collection :scap_content_profiles, _("Scap content profiles") do
+        collection :tailoring_file_profiles, _("Tailoring file profiles") do
           field :id, _("Id")
           field :profile_id, _("Profile id")
           field :title, _("Title")
@@ -43,12 +43,20 @@ module HammerCLIForemanOpenscap
     end
 
     class UpdateCommand < HammerCLIForemanOpenscap::UpdateCommand
-      success_message _("Scap content updated")
-      failure_message _("Could not update Scap content")
+      success_message _("Tailoring file updated")
+      failure_message _("Could not update Tailoring file")
 
-      option "--scap-file", "SCAP_FILE", _("Scap content file"),
+      option "--scap-file", "SCAP_FILE", _("Tailoring file content"),
                    :attribute_name => :option_scap_file,
                    :format => HammerCLI::Options::Normalizers::File.new
+
+      build_options
+    end
+
+    class DownloadCommand < HammerCLIForemanOpenscap::DownloadXmlCommand
+      success_message _("Tailoring file downloaded, saved to: ")
+      failure_message _("Could not download the Tailoring file")
+
       build_options
     end
 
