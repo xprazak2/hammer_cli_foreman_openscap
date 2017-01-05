@@ -5,9 +5,19 @@ module HammerCLIForemanOpenscap
     end
 
     module ClassMethods
+      def api_connection
+        if HammerCLI.context[:api_connection]
+          HammerCLI.context[:api_connection].get("foreman")
+        else
+          HammerCLI::Connection.get("foreman").api
+        end
+      end
+
       def resolver
-        api = HammerCLI::Connection.get("foreman").api
-        HammerCLIForeman::IdResolver.new(api, HammerCLIForemanOpenscap::Searchables.new)
+        HammerCLIForeman::IdResolver.new(
+          api_connection,
+          HammerCLIForemanOpenscap::Searchables.new
+        )
       end
 
       def searchables
