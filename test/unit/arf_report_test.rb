@@ -44,4 +44,20 @@ describe HammerCLIForemanOpenscap::ArfReport do
       it_should_accept "id", ["--id=1"]
     end
   end
+
+  context "DownloadCommand" do
+    let(:cmd) { HammerCLIForemanOpenscap::ArfReport::DownloadCommand.new("", ctx) }
+
+    context "parameters" do
+      it_should_accept "id and path", ["--id=1", "--path='/tmp'"]
+    end
+  end
+
+  context "DownloadHtmlCommand" do
+    let(:cmd) { HammerCLIForemanOpenscap::ArfReport::DownloadHtmlCommand.new("", ctx) }
+
+    context "parameters" do
+      it_should_accept "id and path", ["--id=1", "--path='/tmp'"]
+    end
+  end
 end
