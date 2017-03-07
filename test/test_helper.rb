@@ -1,4 +1,4 @@
-ENV['TEST_API_VERSION'] = '1.11'
+ENV['TEST_API_VERSION'] = '1.15'
 
 require File.join(Gem.loaded_specs['hammer_cli_foreman'].full_gem_path, 'test/unit/test_helper')
 require_relative 'compliance_resource_mock'
