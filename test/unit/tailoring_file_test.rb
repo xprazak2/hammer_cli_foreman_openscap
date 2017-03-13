@@ -1,14 +1,14 @@
 require File.join(File.dirname(__FILE__), 'test_helper')
-require 'hammer_cli_foreman_openscap/scap_content'
+require 'hammer_cli_foreman_openscap/tailoring_file'
 
-describe HammerCLIForemanOpenscap::ScapContent do
+describe HammerCLIForemanOpenscap::TailoringFile do
   include CommandTestHelper
 
   context "ListCommand" do
-    let(:cmd) { HammerCLIForemanOpenscap::ScapContent::ListCommand.new "", ctx }
+    let(:cmd) { HammerCLIForemanOpenscap::TailoringFile::ListCommand.new "", ctx }
 
     before :each do
-      ComplianceResourceMock.scap_contents_list
+      ComplianceResourceMock.tailoring_files_list
     end
 
     context "parameters" do
@@ -19,12 +19,12 @@ describe HammerCLIForemanOpenscap::ScapContent do
     context "output" do
       let(:expected_record_count) { cmd.resource.call(:index).length }
       it_should_print_n_records
-      it_should_print_columns ["Id", "Title"]
+      it_should_print_columns ["Id", "Name"]
     end
   end
 
   context "DeleteCommand" do
-    let(:cmd) { HammerCLIForemanOpenscap::ScapContent::DeleteCommand.new("", ctx) }
+    let(:cmd) { HammerCLIForemanOpenscap::TailoringFile::DeleteCommand.new("", ctx) }
 
     context "parameters" do
       it_should_accept "id", ["--id=1"]
@@ -32,7 +32,7 @@ describe HammerCLIForemanOpenscap::ScapContent do
   end
 
   context "UpdateCommand" do
-    let(:cmd) { HammerCLIForemanOpenscap::ScapContent::UpdateCommand.new("", ctx) }
+    let(:cmd) { HammerCLIForemanOpenscap::TailoringFile::UpdateCommand.new("", ctx) }
 
     context "parameters" do
       it_should_accept "id", ["--id=1"]
@@ -40,7 +40,7 @@ describe HammerCLIForemanOpenscap::ScapContent do
   end
 
   context "InfoCommand" do
-    let(:cmd) { HammerCLIForemanOpenscap::ScapContent::InfoCommand.new("", ctx) }
+    let(:cmd) { HammerCLIForemanOpenscap::TailoringFile::InfoCommand.new("", ctx) }
 
     context "parameters" do
       it_should_accept "id", ["--id=1"]
@@ -49,7 +49,7 @@ describe HammerCLIForemanOpenscap::ScapContent do
     context "output" do
       with_params ["--id=1"] do
         it_should_print_n_records 1
-        it_should_print_columns ["Id", "Title", "Created at", "Original filename", "Scap content profiles", "Organizations"]
+        it_should_print_columns ["Id", "Name", "Created at", "Original filename", "Tailoring file profiles", "Organizations"]
       end
     end
   end

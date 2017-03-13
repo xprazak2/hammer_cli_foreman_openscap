@@ -32,6 +32,14 @@
     }
   end
 
+  def self.tailoring_file
+    {
+      :id => 1,
+      :name => "Red Hat fedora tailored"
+    }
+  end
+
+
   def self.arf_reports_list
     ResourceMocks.mock_action_call(:arf_reports, :index, [arf])
   end
@@ -42,5 +50,9 @@
 
   def self.scap_contents_list
     ResourceMocks.mock_action_call(:scap_contents, :index, [scap_content])
+  end
+
+  def self.tailoring_files_list
+    ResourceMocks.mock_action_call(:tailoring_files, :index, [tailoring_file])
   end
 end

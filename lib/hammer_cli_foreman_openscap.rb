@@ -1,4 +1,5 @@
 require 'hammer_cli_foreman'
+require 'hammer_cli_foreman_openscap/options/normalizers'
 require 'hammer_cli_foreman_openscap/id_resolver'
 require 'hammer_cli_foreman_openscap/commands'
 require 'hammer_cli_foreman_openscap/error'
@@ -21,4 +22,7 @@ module HammerCLIForemanOpenscap
                                          "HammerCLIForemanOpenscap::ScapContent",
                                          "hammer_cli_foreman_openscap/scap_content")
 
+  HammerCLI::MainCommand.lazy_subcommand("tailoring-file", _("Manipulate Tailoring files."),
+                                         "HammerCLIForemanOpenscap::TailoringFile",
+                                         "hammer_cli_foreman_openscap/tailoring_file")
 end

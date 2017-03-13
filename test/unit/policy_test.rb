@@ -1,4 +1,5 @@
-require_relative '../test_helper'
+require File.join(File.dirname(__FILE__), 'test_helper')
+require 'hammer_cli_foreman_openscap/policy'
 
 describe HammerCLIForemanOpenscap::Policy do
   include CommandTestHelper

@@ -19,6 +19,8 @@ module HammerCLIForemanOpenscap
         field :cron_line, _("Cron line")
         field :scap_content_id, _("Scap content Id")
         field :scap_content_profile_id, _("Scap Content profile Id")
+        field :tailoring_file_id, _("Tailoring file Id")
+        field :tailoring_file_profile_id, _("Tailoring file profile Id")
         HammerCLIForeman::References.taxonomies(self)
       end
       build_options

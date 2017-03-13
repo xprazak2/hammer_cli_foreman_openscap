@@ -1,4 +1,5 @@
-require_relative '../test_helper'
+require File.join(File.dirname(__FILE__), 'test_helper')
+require 'hammer_cli_foreman_openscap/arf_report'
 
 describe HammerCLIForemanOpenscap::ArfReport do
   include CommandTestHelper

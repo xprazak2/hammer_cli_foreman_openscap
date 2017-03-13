@@ -39,6 +39,20 @@ module HammerCLIForemanOpenscap
     include HammerCLIForemanOpenscap::ResolverCommons
   end
 
+  class CreateWithScapFileCommand < CreateCommand
+    def self.scap_file_option(description, opts = {}, &block)
+      opts.merge!(:attribute_name => :option_scap_file,
+                  :format => HammerCLIForemanOpenscap::Options::Normalizers::ScapFile.new)
+      option("--scap-file", "SCAP_FILE", description, opts, &block)
+    end
+
+    def request_params
+      all_options['option_original_filename'] ||= self.class.declared_options.find { |opt| opt.attribute_name == "option_scap_file" }
+          .value_formatter.original_filename
+      super
+    end
+  end
+
   class DownloadCommand < HammerCLIForeman::SingleResourceCommand
     include HammerCLIForemanOpenscap::ResolverCommons
     action :download
@@ -60,7 +74,7 @@ module HammerCLIForemanOpenscap
       super + @filepath
     end
 
-    option "--path", "PATH", _("Path where to save downloaded file"),
+    option "--path", "PATH", _("Path to directory where downloaded file will be saved"),
         :attribute_name => :option_path
 
     def print_data(response)
@@ -70,12 +84,20 @@ module HammerCLIForemanOpenscap
       end
       # get file name from header, remove leading and trailing quotes
       filename = response.headers[:content_disposition].match(/filename=(.*)/)[1].chop.reverse.chop.reverse
-      path = option_path.dup || '.'
+      path = option_path.dup
       path << '/' unless path.end_with? '/'
       raise HammerCLIForemanOpenscap::DownloadError.new "Cannot save file: #{path} does not exist" unless File.directory?(path)
       @filepath = path + filename
       File.write(@filepath, response.body)
       print_success_message(response)
+    end
+  end
+
+  class DownloadXmlCommand < DownloadCommand
+    action :xml
+
+    def self.command_name(name = nil)
+      super(name) || "xml"
     end
   end
 end
