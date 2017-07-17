@@ -39,6 +39,10 @@ module HammerCLIForemanOpenscap
     include HammerCLIForemanOpenscap::ResolverCommons
   end
 
+  class DeleteCommand < HammerCLIForeman::DeleteCommand
+    include HammerCLIForemanOpenscap::ResolverCommons
+  end
+
   class CreateWithScapFileCommand < CreateCommand
     def self.scap_file_option(description, opts = {}, &block)
       opts.merge!(:attribute_name => :option_scap_file,

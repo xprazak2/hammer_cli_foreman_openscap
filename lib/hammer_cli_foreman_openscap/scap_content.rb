@@ -20,7 +20,7 @@ module HammerCLIForemanOpenscap
       build_options
     end
 
-    class DeleteCommand < HammerCLIForeman::DeleteCommand
+    class DeleteCommand < HammerCLIForemanOpenscap::DeleteCommand
       success_message _("Scap content deleted")
       failure_message _("Could not delete Scap content")
 
