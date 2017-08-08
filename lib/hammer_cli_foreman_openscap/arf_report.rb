@@ -6,8 +6,16 @@ module HammerCLIForemanOpenscap
     class ListCommand < HammerCLIForeman::ListCommand
       output do
         field :id, _("Id")
-        field :host, _("Host")
         field :reported_at, _("Reported at")
+        from :host do
+          field :name, _("Host name")
+        end
+        from :openscap_proxy do
+          field :name, _("OpenSCAP proxy name")
+        end
+        from :policy do
+          field :name, _("Policy name")
+        end
         field :passed, _("Passed")
         field :failed, _("Failed")
         field :othered, _("Othered")
@@ -17,9 +25,15 @@ module HammerCLIForemanOpenscap
 
     class InfoCommand < HammerCLIForemanOpenscap::InfoCommand
       output ListCommand.output_definition do
-        field :host_id, _("Host Id")
-        field :openscap_proxy_id, _("OpenSCAP proxy Id")
-        field :openscap_proxy_name, _("OpenSCAP proxy name")
+        from :host do
+          field :id, _("Host Id")
+        end
+        from :openscap_proxy do
+          field :id, _("OpenSCAP proxy Id")
+        end
+        from :policy do
+          field :id, _("Policy Id")
+        end
         HammerCLIForeman::References.taxonomies(self)
       end
 
