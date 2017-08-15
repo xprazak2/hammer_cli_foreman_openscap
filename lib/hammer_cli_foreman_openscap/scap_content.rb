@@ -52,6 +52,13 @@ module HammerCLIForemanOpenscap
       build_options
     end
 
+    class DownloadCommand < HammerCLIForemanOpenscap::DownloadXmlCommand
+      success_message _("Scap content file downloaded, saved to: ")
+      failure_message _("Could not download the Scap content file")
+
+      build_options
+    end
+
     autoload_subcommands
   end
 end
