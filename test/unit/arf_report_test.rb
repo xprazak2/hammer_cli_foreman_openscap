@@ -43,6 +43,7 @@ describe HammerCLIForemanOpenscap::ArfReport do
 
     context "parameters" do
       it_should_accept "id", ["--id=1"]
+      it_should_fail_with "name", ["--name=something"]
     end
   end
 
