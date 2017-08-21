@@ -16,6 +16,7 @@ module HammerCLIForemanOpenscap
       output ListCommand.output_definition do
         field :period, _("Period")
         field :weekday, _("Weekday")
+        field :day_of_month, _("Day of month")
         field :cron_line, _("Cron line")
         field :scap_content_id, _("Scap content Id")
         field :scap_content_profile_id, _("Scap Content profile Id")
