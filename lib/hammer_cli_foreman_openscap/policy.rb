@@ -23,6 +23,7 @@ module HammerCLIForemanOpenscap
         field :tailoring_file_id, _("Tailoring file Id")
         field :tailoring_file_profile_id, _("Tailoring file profile Id")
         HammerCLIForeman::References.taxonomies(self)
+        HammerCLIForeman::References.hostgroups(self)
       end
       build_options
     end
