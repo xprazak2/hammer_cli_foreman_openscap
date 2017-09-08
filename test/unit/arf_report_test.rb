@@ -33,7 +33,7 @@ describe HammerCLIForemanOpenscap::ArfReport do
     context "output" do
       with_params ["--id=1"] do
         it_should_print_n_records 1
-        it_should_print_columns ["Id", "Host", "Reported at", "Passed", "Failed", "Othered", "Host Id", "Openscap proxy Id", "Openscap proxy name"]
+        it_should_print_columns ["Id", "Host", "Reported at", "Passed", "Failed", "Othered", "Host Id", "OpenSCAP proxy Id", "OpenSCAP proxy name"]
       end
     end
   end

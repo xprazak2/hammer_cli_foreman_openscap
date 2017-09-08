@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hammer_cli_foreman_openscap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hammer_cli_foreman_openscap 0.1.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-08 16:19-0400\n"
+"PO-Revision-Date: 2017-09-08 16:19-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ../lib/hammer_cli_foreman_openscap.rb:13
+msgid "Manipulate compliance reports"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap.rb:17
+msgid "Manipulate policies"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap.rb:21
+msgid "Manipulate SCAP contents"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap.rb:25
+msgid "Manipulate Tailoring files"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:8
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:8
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:8
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:36
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:8
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:36
+msgid "Id"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:9
+msgid "Host"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:10
+msgid "Reported at"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:11
+msgid "Passed"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:12
+msgid "Failed"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:13
+msgid "Othered"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:20
+msgid "Host Id"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:21
+msgid "OpenSCAP proxy Id"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:22
+msgid "OpenSCAP proxy name"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:30
+msgid "ARF report deleted"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:31
+msgid "Could not delete the ARF report"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:37
+msgid "ARF report downloaded, saved to: "
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:38
+msgid "Could not download the ARF report"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:45
+msgid "ARF report in HTML downloaded, saved to: "
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/arf_report.rb:46
+msgid "Could not download the ARF report in HTML"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/commands.rb:81
+msgid "Path to directory where downloaded file will be saved"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/id_resolver.rb:4
+msgid "SCAP content title"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/id_resolver.rb:6
+msgid "Policy name"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/id_resolver.rb:10
+msgid "Name to search by"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:9
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:9
+msgid "Name"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:10
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:32
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:32
+msgid "Created at"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:17
+msgid "Period"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:18
+msgid "Weekday"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:19
+msgid "Day of month"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:20
+msgid "Cron line"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:21
+msgid "SCAP content Id"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:22
+msgid "SCAP Content profile Id"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:23
+msgid "Tailoring file Id"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:24
+msgid "Tailoring file profile Id"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:32
+msgid "Policy has been deleted"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:33
+msgid "Could not delete the policy"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:40
+msgid "Policy created"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:41
+msgid "Could not create the policy"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:48
+msgid "Policy updated"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/policy.rb:49
+msgid "Could not update the policy"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:9
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:38
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:38
+msgid "Title"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:15
+msgid "SCAP content successfully created"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:16
+msgid "Failed to create SCAP content"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:18
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:49
+msgid "SCAP content file"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:24
+msgid "SCAP content deleted"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:25
+msgid "Could not delete SCAP content"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:33
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:33
+msgid "Original filename"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:35
+msgid "SCAP content profiles"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:37
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:37
+msgid "Profile id"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:46
+msgid "SCAP content updated"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:47
+msgid "Could not update SCAP content"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:56
+msgid "SCAP content file downloaded, saved to: "
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/scap_content.rb:57
+msgid "Could not download the SCAP content file"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:15
+msgid "Tailoring file successfully created"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:16
+msgid "Failed to create Tailoring file"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:18
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:49
+msgid "Tailoring file content"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:24
+msgid "Tailoring file deleted"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:25
+msgid "Could not delete Tailoring file"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:35
+msgid "Tailoring file profiles"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:46
+msgid "Tailoring file updated"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:47
+msgid "Could not update Tailoring file"
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:57
+msgid "Tailoring file downloaded, saved to: "
+msgstr ""
+
+#: ../lib/hammer_cli_foreman_openscap/tailoring_file.rb:58
+msgid "Could not download the Tailoring file"
+msgstr ""

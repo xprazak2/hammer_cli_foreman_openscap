@@ -18,8 +18,8 @@ module HammerCLIForemanOpenscap
     class InfoCommand < HammerCLIForemanOpenscap::InfoCommand
       output ListCommand.output_definition do
         field :host_id, _("Host Id")
-        field :openscap_proxy_id, _("Openscap proxy Id")
-        field :openscap_proxy_name, _("Openscap proxy name")
+        field :openscap_proxy_id, _("OpenSCAP proxy Id")
+        field :openscap_proxy_name, _("OpenSCAP proxy name")
         HammerCLIForeman::References.taxonomies(self)
       end
 
@@ -27,23 +27,23 @@ module HammerCLIForemanOpenscap
     end
 
     class DeleteCommand < HammerCLIForemanOpenscap::DeleteCommand
-      success_message _("Arf report deleted")
-      failure_message _("Could not delete the Arf report")
+      success_message _("ARF report deleted")
+      failure_message _("Could not delete the ARF report")
 
       build_options
     end
 
     class DownloadCommand < HammerCLIForemanOpenscap::DownloadCommand
-      success_message _("Arf report downloaded, saved to: ")
-      failure_message _("Could not download the Arf report")
+      success_message _("ARF report downloaded, saved to: ")
+      failure_message _("Could not download the ARF report")
 
       build_options
     end
 
     class DownloadHtmlCommand < HammerCLIForemanOpenscap::DownloadCommand
       action :download_html
-      success_message _("Arf report in HTML downloaded, saved to: ")
-      failure_message _("Could not download the Arf report in HTML")
+      success_message _("ARF report in HTML downloaded, saved to: ")
+      failure_message _("Could not download the ARF report in HTML")
 
       def self.command_name(name = "download-html")
         super(name)

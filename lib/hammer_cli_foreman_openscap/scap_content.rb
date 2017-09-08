@@ -12,17 +12,17 @@ module HammerCLIForemanOpenscap
     end
 
     class CreateCommand < HammerCLIForemanOpenscap::CreateWithScapFileCommand
-      success_message _("Scap content successfully created")
-      failure_message _("Failed to create Scap content")
+      success_message _("SCAP content successfully created")
+      failure_message _("Failed to create SCAP content")
 
-      scap_file_option _("Scap content file")
+      scap_file_option _("SCAP content file")
 
       build_options
     end
 
     class DeleteCommand < HammerCLIForemanOpenscap::DeleteCommand
-      success_message _("Scap content deleted")
-      failure_message _("Could not delete Scap content")
+      success_message _("SCAP content deleted")
+      failure_message _("Could not delete SCAP content")
 
       build_options
     end
@@ -32,7 +32,7 @@ module HammerCLIForemanOpenscap
         field :created_at, _("Created at")
         field :original_filename, _("Original filename")
 
-        collection :scap_content_profiles, _("Scap content profiles") do
+        collection :scap_content_profiles, _("SCAP content profiles") do
           field :id, _("Id")
           field :profile_id, _("Profile id")
           field :title, _("Title")
@@ -43,18 +43,18 @@ module HammerCLIForemanOpenscap
     end
 
     class UpdateCommand < HammerCLIForemanOpenscap::UpdateCommand
-      success_message _("Scap content updated")
-      failure_message _("Could not update Scap content")
+      success_message _("SCAP content updated")
+      failure_message _("Could not update SCAP content")
 
-      option "--scap-file", "SCAP_FILE", _("Scap content file"),
+      option "--scap-file", "SCAP_FILE", _("SCAP content file"),
                    :attribute_name => :option_scap_file,
                    :format => HammerCLI::Options::Normalizers::File.new
       build_options
     end
 
     class DownloadCommand < HammerCLIForemanOpenscap::DownloadXmlCommand
-      success_message _("Scap content file downloaded, saved to: ")
-      failure_message _("Could not download the Scap content file")
+      success_message _("SCAP content file downloaded, saved to: ")
+      failure_message _("Could not download the SCAP content file")
 
       build_options
     end
