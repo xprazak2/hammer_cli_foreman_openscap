@@ -10,19 +10,19 @@ module HammerCLIForemanOpenscap
     HammerCLIForemanOpenscap::ExceptionHandler
   end
 
-  HammerCLI::MainCommand.lazy_subcommand("arf-report", _("Manipulate compliance reports."),
+  HammerCLI::MainCommand.lazy_subcommand("arf-report", _("Manipulate compliance reports"),
                                          "HammerCLIForemanOpenscap::ArfReport",
                                          "hammer_cli_foreman_openscap/arf_report")
 
-  HammerCLI::MainCommand.lazy_subcommand("policy", _("Manipulate policies."),
+  HammerCLI::MainCommand.lazy_subcommand("policy", _("Manipulate policies"),
                                          "HammerCLIForemanOpenscap::Policy",
                                          "hammer_cli_foreman_openscap/policy")
 
-  HammerCLI::MainCommand.lazy_subcommand("scap-content", _("Manipulate Scap contents."),
+  HammerCLI::MainCommand.lazy_subcommand("scap-content", _("Manipulate SCAP contents"),
                                          "HammerCLIForemanOpenscap::ScapContent",
                                          "hammer_cli_foreman_openscap/scap_content")
 
-  HammerCLI::MainCommand.lazy_subcommand("tailoring-file", _("Manipulate Tailoring files."),
+  HammerCLI::MainCommand.lazy_subcommand("tailoring-file", _("Manipulate Tailoring files"),
                                          "HammerCLIForemanOpenscap::TailoringFile",
                                          "hammer_cli_foreman_openscap/tailoring_file")
 end

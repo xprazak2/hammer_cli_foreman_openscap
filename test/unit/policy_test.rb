@@ -35,8 +35,8 @@ describe HammerCLIForemanOpenscap::Policy do
       with_params ["--id=1"] do
         it_should_print_n_records 1
         it_should_print_columns ["Id", "Name", "Created at", "Period", "Weekday",
-                                 "Day of month", "Cron line", "Scap content Id",
-                                 "Scap Content profile Id", "Hostgroups"]
+                                 "Day of month", "Cron line", "SCAP content Id",
+                                 "SCAP Content profile Id", "Hostgroups"]
       end
     end
   end

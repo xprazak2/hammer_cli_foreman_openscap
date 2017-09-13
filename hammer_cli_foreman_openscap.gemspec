@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.summary = %q{Foreman OpenSCAP commands for Hammer}
   s.license = "GPL-3"
-  s.files = Dir['{lib,config}/**/*', 'LICENSE', 'README.md']
+  s.files = Dir['{lib,config,locale}/**/*', 'LICENSE', 'README.md']
   s.require_paths = ["lib"]
   s.test_files = Dir["test/**/*"]
 
