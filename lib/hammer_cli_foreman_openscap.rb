@@ -4,6 +4,8 @@ require 'hammer_cli_foreman_openscap/id_resolver'
 require 'hammer_cli_foreman_openscap/commands'
 require 'hammer_cli_foreman_openscap/error'
 require 'hammer_cli_foreman_openscap/exception_handler'
+require 'hammer_cli_foreman_openscap/hostgroup'
+require 'hammer_cli_foreman_openscap/host'
 
 module HammerCLIForemanOpenscap
   def self.exception_handler_class
