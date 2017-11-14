@@ -52,6 +52,22 @@ module HammerCLIForemanOpenscap
       build_options
     end
 
+    class HostsCommand < HammerCLIForeman::AssociatedListSearchCommand
+      command_name 'hosts'
+      search_resource :hosts
+
+      def self.search_options_mapping
+        {
+          'id' => 'compliance_policy_id',
+          'name' => 'compliance_policy'
+        }
+      end
+
+      output HammerCLIForeman::Host::ListCommand.output_definition
+
+      build_options
+    end
+
     autoload_subcommands
   end
 end
