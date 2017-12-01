@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hammer_cli_foreman_openscap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hammer_cli_foreman_openscap 0.1.4\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-09-08 16:19-0400\n"
+"Last-Translator: francis <hackgo@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/foreman/teams/114/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Manipulate compliance reports"
+msgstr ""
+
+msgid "Manipulate policies"
+msgstr ""
+
+msgid "Manipulate SCAP contents"
+msgstr ""
+
+msgid "Manipulate Tailoring files"
+msgstr ""
+
+msgid "Id"
+msgstr "ID"
+
+msgid "Host"
+msgstr "host"
+
+msgid "Reported at"
+msgstr "Reportado en"
+
+msgid "Passed"
+msgstr "Leído"
+
+msgid "Failed"
+msgstr "Errores"
+
+msgid "Othered"
+msgstr "Distinto"
+
+msgid "Host Id"
+msgstr ""
+
+msgid "OpenSCAP proxy Id"
+msgstr ""
+
+msgid "OpenSCAP proxy name"
+msgstr ""
+
+msgid "ARF report deleted"
+msgstr ""
+
+msgid "Could not delete the ARF report"
+msgstr ""
+
+msgid "ARF report downloaded, saved to: "
+msgstr ""
+
+msgid "Could not download the ARF report"
+msgstr ""
+
+msgid "ARF report in HTML downloaded, saved to: "
+msgstr ""
+
+msgid "Could not download the ARF report in HTML"
+msgstr ""
+
+msgid "Path to directory where downloaded file will be saved"
+msgstr ""
+
+msgid "SCAP content title"
+msgstr ""
+
+msgid "Policy name"
+msgstr "Nombre de la política"
+
+msgid "Name to search by"
+msgstr "Nombre a buscar"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Created at"
+msgstr "Creado"
+
+msgid "Period"
+msgstr ""
+
+msgid "Weekday"
+msgstr ""
+
+msgid "Day of month"
+msgstr ""
+
+msgid "Cron line"
+msgstr "Línea Cron"
+
+msgid "SCAP content Id"
+msgstr ""
+
+msgid "SCAP Content profile Id"
+msgstr ""
+
+msgid "Tailoring file Id"
+msgstr ""
+
+msgid "Tailoring file profile Id"
+msgstr ""
+
+msgid "Policy has been deleted"
+msgstr ""
+
+msgid "Could not delete the policy"
+msgstr ""
+
+msgid "Policy created"
+msgstr ""
+
+msgid "Could not create the policy"
+msgstr ""
+
+msgid "Policy updated"
+msgstr ""
+
+msgid "Could not update the policy"
+msgstr ""
+
+msgid "Title"
+msgstr "Título"
+
+msgid "SCAP content successfully created"
+msgstr ""
+
+msgid "Failed to create SCAP content"
+msgstr ""
+
+msgid "SCAP content file"
+msgstr ""
+
+msgid "SCAP content deleted"
+msgstr ""
+
+msgid "Could not delete SCAP content"
+msgstr ""
+
+msgid "Original filename"
+msgstr ""
+
+msgid "SCAP content profiles"
+msgstr ""
+
+msgid "Profile id"
+msgstr ""
+
+msgid "SCAP content updated"
+msgstr ""
+
+msgid "Could not update SCAP content"
+msgstr ""
+
+msgid "SCAP content file downloaded, saved to: "
+msgstr ""
+
+msgid "Could not download the SCAP content file"
+msgstr ""
+
+msgid "Tailoring file successfully created"
+msgstr ""
+
+msgid "Failed to create Tailoring file"
+msgstr ""
+
+msgid "Tailoring file content"
+msgstr ""
+
+msgid "Tailoring file deleted"
+msgstr ""
+
+msgid "Could not delete Tailoring file"
+msgstr ""
+
+msgid "Tailoring file profiles"
+msgstr ""
+
+msgid "Tailoring file updated"
+msgstr ""
+
+msgid "Could not update Tailoring file"
+msgstr ""
+
+msgid "Tailoring file downloaded, saved to: "
+msgstr ""
+
+msgid "Could not download the Tailoring file"
+msgstr ""
