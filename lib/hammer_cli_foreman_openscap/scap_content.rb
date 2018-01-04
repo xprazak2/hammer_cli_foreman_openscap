@@ -32,7 +32,7 @@ module HammerCLIForemanOpenscap
         field :created_at, _("Created at")
         field :original_filename, _("Original filename")
 
-        collection :scap_content_profiles, _("SCAP content profiles") do
+        collection :scap_content_profiles, _("SCAP content profiles"), :numbered => false do
           field :id, _("Id")
           field :profile_id, _("Profile id")
           field :title, _("Title")
