@@ -8,6 +8,8 @@ require 'hammer_cli_foreman_openscap/hostgroup'
 require 'hammer_cli_foreman_openscap/host'
 
 module HammerCLIForemanOpenscap
+  require 'hammer_cli_foreman_openscap/version'
+
   def self.exception_handler_class
     HammerCLIForemanOpenscap::ExceptionHandler
   end
