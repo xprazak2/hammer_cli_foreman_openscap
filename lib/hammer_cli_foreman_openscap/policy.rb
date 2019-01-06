@@ -22,6 +22,7 @@ module HammerCLIForemanOpenscap
         field :scap_content_profile_id, _("SCAP Content profile Id")
         field :tailoring_file_id, _("Tailoring file Id")
         field :tailoring_file_profile_id, _("Tailoring file profile Id")
+        field :deploy_by, _("Deployment option")
         HammerCLIForeman::References.taxonomies(self)
         HammerCLIForeman::References.hostgroups(self)
       end
