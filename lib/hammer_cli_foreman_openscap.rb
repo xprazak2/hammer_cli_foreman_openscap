@@ -6,6 +6,7 @@ require 'hammer_cli_foreman_openscap/error'
 require 'hammer_cli_foreman_openscap/exception_handler'
 require 'hammer_cli_foreman_openscap/hostgroup'
 require 'hammer_cli_foreman_openscap/host'
+require 'pry-byebug'
 
 module HammerCLIForemanOpenscap
   require 'hammer_cli_foreman_openscap/version'
