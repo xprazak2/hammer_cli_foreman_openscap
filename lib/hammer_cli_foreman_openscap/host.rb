@@ -23,6 +23,10 @@ module HammerCLIForemanOpenscap
         field :week, _('Week')
       end
 
+      def adapter
+        @context[:adapter] || :base
+      end
+
       build_options
     end
     autoload_subcommands
