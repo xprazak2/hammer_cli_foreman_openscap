@@ -1,4 +1,5 @@
 require 'hammer_cli_foreman'
+require 'hammer_cli_foreman/host'
 require 'hammer_cli_foreman_openscap/options/normalizers'
 require 'hammer_cli_foreman_openscap/id_resolver'
 require 'hammer_cli_foreman_openscap/commands'
@@ -29,4 +30,8 @@ module HammerCLIForemanOpenscap
   HammerCLI::MainCommand.lazy_subcommand("tailoring-file", _("Manipulate Tailoring files"),
                                          "HammerCLIForemanOpenscap::TailoringFile",
                                          "hammer_cli_foreman_openscap/tailoring_file")
+
+  HammerCLIForeman::Host.lazy_subcommand(Host::PoliciesEnc.command_name, _('View policies ENC for host'),
+                                        "HammerCLIForemanOpenscap::Host::PoliciesEnc",
+                                        "hammer_cli_foreman_openscap/host")
 end
