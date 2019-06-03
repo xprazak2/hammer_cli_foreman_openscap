@@ -58,8 +58,8 @@ module HammerCLIForemanOpenscap
 
       def self.search_options_mapping
         {
-          'policy_id' => 'compliance_policy_id',
-          'policy_name' => 'compliance_policy'
+          'id' => 'compliance_policy_id',
+          'name' => 'compliance_policy'
         }
       end
 
