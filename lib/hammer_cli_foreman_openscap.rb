@@ -7,6 +7,7 @@ require 'hammer_cli_foreman_openscap/error'
 require 'hammer_cli_foreman_openscap/exception_handler'
 require 'hammer_cli_foreman_openscap/hostgroup'
 require 'hammer_cli_foreman_openscap/host'
+require 'hammer_cli_foreman_openscap/scap_content_profile'
 
 module HammerCLIForemanOpenscap
   require 'hammer_cli_foreman_openscap/version'
@@ -30,6 +31,10 @@ module HammerCLIForemanOpenscap
   HammerCLI::MainCommand.lazy_subcommand("tailoring-file", _("Manipulate Tailoring files"),
                                          "HammerCLIForemanOpenscap::TailoringFile",
                                          "hammer_cli_foreman_openscap/tailoring_file")
+
+  HammerCLI::MainCommand.lazy_subcommand("scap-content-profile", _("Manipulate Scap Content Profiles"),
+                                         "HammerCLIForemanOpenscap::ScapContentProfile",
+                                         "hammer_cli_foreman_openscap/scap_content_profile")
 
   HammerCLIForeman::Host.lazy_subcommand(Host::PoliciesEnc.command_name, _('View policies ENC for host'),
                                         "HammerCLIForemanOpenscap::Host::PoliciesEnc",
