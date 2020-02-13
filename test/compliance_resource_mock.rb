@@ -4,12 +4,19 @@
   def self.arf
     {
       :id => 1,
-      :host => "somewhere.example.com",
+      :host => {
+        :name => "somewhere.example.com"
+      },
       :reported_at => "1916-06-08",
       :passed => 24,
       :failed => 25,
       :othered => 26,
-      :opeancap_proxy_name => "scap_proxy.example.com"
+      :openscap_proxy_name => {
+        :name => "scap_proxy.example.com"
+      },
+      :policy => {
+        :name => "strict policy"
+      }
     }
   end
 

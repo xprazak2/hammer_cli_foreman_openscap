@@ -12,9 +12,9 @@ describe 'scap content' do
       expected_result = CommandExpectation.new
       expected_result.expected_err =
         ['Could not download the SCAP content file:',
-         '  Error: Option --path is required',
+         '  Error: Option --path is required.',
          '  ',
-         "  See: 'hammer scap-content download --help'",
+         "  See: 'hammer scap-content download --help'.",
          ''].join("\n")
 
       expected_result.expected_exit_code = HammerCLI::EX_USAGE
