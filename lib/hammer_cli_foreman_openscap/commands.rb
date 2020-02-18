@@ -50,10 +50,11 @@ module HammerCLIForemanOpenscap
       option("--scap-file", "SCAP_FILE", description, opts, &block)
     end
 
-    def request_params
-      all_options['option_original_filename'] ||= self.class.declared_options.find { |opt| opt.attribute_name == "option_scap_file" }
+    def method_options(params)
+      opts = super params
+      opts[resource.singular_name]['original_filename'] ||= self.class.declared_options.find { |opt| opt.attribute_name == "option_scap_file" }
           .value_formatter.original_filename
-      super
+      opts
     end
   end
 

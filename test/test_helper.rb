@@ -4,7 +4,7 @@ FOREMAN_OPENSCAP_VERSION = Gem::Version.new(ENV['TEST_API_VERSION'])
 require 'minitest/autorun'
 require 'minitest/spec'
 require "minitest-spec-context"
-require "mocha/setup"
+require "mocha/minitest"
 require 'hammer_cli'
 
 if HammerCLI.context[:api_connection]
