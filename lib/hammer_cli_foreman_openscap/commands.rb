@@ -88,7 +88,7 @@ module HammerCLIForemanOpenscap
         return
       end
       # get file name from header, remove leading and trailing quotes
-      filename = response.headers[:content_disposition].match(/filename=(.*)/)[1].chop.reverse.chop.reverse
+      filename = response.headers[:content_disposition].match(/filename=(.*);/)[1].chop.reverse.chop.reverse
       path = option_path.dup
       path << '/' unless path.end_with? '/'
       raise HammerCLIForemanOpenscap::DownloadError.new "Cannot save file: #{path} does not exist" unless File.directory?(path)
