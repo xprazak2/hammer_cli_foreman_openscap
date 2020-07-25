@@ -7,6 +7,7 @@ module HammerCLIForemanOpenscap
       output do
         field :id, _("Id")
         field :title, _("Title")
+        field :digest, _("Digest")
       end
       build_options
     end
