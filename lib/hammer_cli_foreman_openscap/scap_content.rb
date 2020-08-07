@@ -21,6 +21,25 @@ module HammerCLIForemanOpenscap
       build_options
     end
 
+    class BulkUpload < HammerCLIForemanOpenscap::CreateCommand
+      command_name "bulk-upload"
+      action :bulk_upload
+
+      success_message _('Scap Contents uploaded.')
+      failure_message _('Could not upload Scap Contents')
+
+      output do
+        field :errors, _('Errors'), Fields::List, :on_new_line => true, :separator => "\n"
+        collection :results, _('Uploaded Scap Contents') do
+          field :id, _("Id")
+          field :title, _("Title")
+          field :original_filename, _("Original Filename")
+        end
+      end
+
+      build_options
+    end
+
     class DeleteCommand < HammerCLIForemanOpenscap::DeleteCommand
       success_message _("SCAP content deleted")
       failure_message _("Could not delete SCAP content")
